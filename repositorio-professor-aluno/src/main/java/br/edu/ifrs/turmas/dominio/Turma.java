@@ -19,11 +19,17 @@ public class Turma {
 
     private String nome;
     
-    @ManyToOne
+    @ManyToOne //Lado dono - leva a coluna de chave estrangeira para a relacao professor - turma
     private Professor professor;
     
-    @OneToMany(mappedBy = "turma")
+    @OneToMany(mappedBy = "turma") //Lado espelho em relacao a turma -aluno
     private List<Aluno> alunos = new ArrayList<>();
+    //Lado espelho leva mappedby apontando o nome do atributo do lado do dono
+
+    //Turma.professor    @ManyToOne                         lado DONO
+    //Professor.turmas   @OneToMany(mappedby = "professor") lado ESPELHO
+    //Aluno.turma        @ManyToOne                         lado DONO
+    //Turma.alunos       @OneToMany(mappedby = "turma")     lado ESPELHO
 
     public Turma() {
     }

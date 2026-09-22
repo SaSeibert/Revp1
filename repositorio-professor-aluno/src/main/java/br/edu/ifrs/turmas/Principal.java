@@ -118,7 +118,12 @@ public class Principal {
 	    professorDAO.salvar(vitor);
 	    
 	    professorDAO.remover(1L);
-    
+
     	
     }
+
+	//criando o banco: Abrir o xampp, clicar em Apache e MySql para startar
+        //quando ambos ficarem verdes, vamos apertar em Admin do MySql para a abrir o phpMyAdmin
+        //com o phpMyAdmin aberto, apertar em "novo" e vai ter um campo escrito "nome do banco de dados"
+        //clicar em criar -> esse é o nome que vai estar do lado da barra do localhost no persistence.xml
 }
